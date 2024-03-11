@@ -3,6 +3,7 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import Home from './pages/unAuthPages/Home';
+import BookNow from './pages/unAuthPages/BookNow';
 
 export default function App() {
   const queryClient = new QueryClient({
@@ -18,6 +19,7 @@ export default function App() {
       <Router>
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='/book-now' element={<BookNow />} />
         </Routes>
       </Router>
       <Toaster
