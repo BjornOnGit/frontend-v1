@@ -11,8 +11,10 @@ export default {
         'blue-900': '#00A3FF',
         'purple-900': '#FFCCFD',
         'red-900': '#f24747',
+        'grey-700': '#9D9D9D',
         'grey-800': '#F9F9F9',
         'grey-900': '#D9D9D9',
+
       },
       backgroundImage: {
         hospitalBg: "url('./src/assets/images/hospital.png')",
