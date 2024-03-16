@@ -4,10 +4,10 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import Home from './pages/unAuthPages/Home';
 import BookNow from './pages/unAuthPages/BookNow';
+import BookAppointment from './pages/unAuthPages/BookAppointment';
 import PatientInfo from './pages/unAuthPages/PatientInfo';
 import Navbar from './components/Navbar';
 import Chat from './pages/unAuthPages/Chat';
-
 
 export default function App() {
   const queryClient = new QueryClient({
@@ -25,6 +25,7 @@ export default function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/book-now' element={<BookNow />} />
+          <Route path='/book-appointment' element={<BookAppointment />} />
           <Route path='/patient-info' element={<PatientInfo />} />
           <Route path='/chat' element={<Chat />} />
         </Routes>

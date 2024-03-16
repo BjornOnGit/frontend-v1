@@ -1,11 +1,11 @@
 import { useMutation } from '@tanstack/react-query';
 import axios from 'axios';
 
-export default function useBookNow() {
-  const { mutate: bookNow, isPending: bookNowLoading } = useMutation({
+export default function usePatientInfo() {
+  const { mutate: patientInfo, isPending: patientInfoLoading } = useMutation({
     mutationFn: async (formData) => {
       await axios.post(
-        `${import.meta.env.VITE_APP_BASE_URL}/formhandlers/book_now/`,
+        `${import.meta.env.VITE_APP_BASE_URL}/formhandlers/patient_info/`,
         formData,
         {
           headers: {
@@ -15,5 +15,5 @@ export default function useBookNow() {
       );
     },
   });
-  return { bookNow, bookNowLoading };
+  return { patientInfo, patientInfoLoading };
 }
