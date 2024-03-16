@@ -6,6 +6,7 @@ import Home from './pages/unAuthPages/Home';
 import BookNow from './pages/unAuthPages/BookNow';
 import PatientInfo from './pages/unAuthPages/PatientInfo';
 import Navbar from './components/Navbar';
+import Chat from './pages/unAuthPages/Chat';
 
 
 export default function App() {
@@ -25,6 +26,7 @@ export default function App() {
           <Route path='/' element={<Home />} />
           <Route path='/book-now' element={<BookNow />} />
           <Route path='/patient-info' element={<PatientInfo />} />
+          <Route path='/chat' element={<Chat />} />
         </Routes>
       </Router>
       <Toaster
