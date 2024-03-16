@@ -32,7 +32,7 @@ export default function BookNow() {
   };
 
   return (
-    <section className="w-full h-full min-h-screen px-6 md:px-[6rem] py-[3.4rem] bg-opacity-85 flex bg-[url('./src/assets/images/hospital.png')] flex-col md:flex-row justify-between items-center bg-cover bg-no-repeat overflow-hidden">
+    <section className='w-full h-full min-h-screen px-6 md:px-[6rem] py-[3.4rem] bg-opacity-85 flex bg-hospitalBg flex-col md:flex-row justify-between items-center bg-cover bg-no-repeat overflow-hidden'>
       <div className='flex-[40%]'>
         <h2 className='text-[4.8rem] bg-gradient-to-tr from-green-900 to-blue-900 text-transparent bg-clip-text font-bold mb-[1.5rem]'>
           Book Your Visit At VirtuDoc

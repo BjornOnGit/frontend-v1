@@ -14,6 +14,9 @@ export default {
         'grey-800': '#F9F9F9',
         'grey-900': '#D9D9D9',
       },
+      backgroundImage: {
+        hospitalBg: "url('./src/assets/images/hospital.png')",
+      },
     },
   },
   plugins: [],
