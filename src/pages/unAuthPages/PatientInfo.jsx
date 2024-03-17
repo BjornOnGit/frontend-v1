@@ -144,7 +144,11 @@ const PatientInfo = () => {
                             })}
                         >
                             <option value=''>---Select---</option>
-                            <option value='urgent'>Urgent</option>
+                            <option value='Hypertensive and diabetic'>Hypertensive and Diabetic</option>
+                            <option value='Hypertensive'>Hypertensive</option>
+                            <option value='Diabetic'>Diabetic</option>
+                            <option value='Onco'>Onco genes (Cancer traits)</option>
+                            <option value='Sickler'>Sickler (Sickle cell anaemia)</option>
                         </select>
                         <span className='text-red-900 text-xl'>
                             {errors?.service_selected?.message}
