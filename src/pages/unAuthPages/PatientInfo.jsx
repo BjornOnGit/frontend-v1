@@ -27,9 +27,9 @@ const PatientInfo = () => {
     };
     patientInfo(payload, {
       onSuccess: (data) => {
+        navigate('/chat');
         reset();
         toast.success(data.message);
-        navigate('/chat');
       },
     });
   };

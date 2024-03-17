@@ -22,14 +22,14 @@ export default function BookAppointment() {
       email: data.email,
       phone: data.phone,
       service_selected: data.service_selected,
-      scheduled_date: '2024-04-20',
-      scheduled_time: '02:10:00',
+      scheduled_date: data.scheduled_date,
+      scheduled_time: data.scheduled_time,
     };
     bookAppointment(payload, {
       onSuccess: (data) => {
+        navigate('/patient-info');
         reset();
         toast.success(data.message);
-        navigate('/patient-info');
       },
     });
   };
