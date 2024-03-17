@@ -1,12 +1,12 @@
 import { useForm } from 'react-hook-form';
-import { useNavigate } from 'react-router-dom';
-import toast from 'react-hot-toast';
-import useBookNow from './useBookNow';
 
 import doctorImg from '../../assets/images/doctor.png';
+import useBookAppointment from './useBookAppointment';
+import toast from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
 
-export default function BookNow() {
-  const { bookNow, bookNowLoading } = useBookNow();
+export default function BookAppointment() {
+  const { bookAppointment, bookAppointmentLoading } = useBookAppointment();
   const navigate = useNavigate();
 
   const {
@@ -22,12 +22,14 @@ export default function BookNow() {
       email: data.email,
       phone: data.phone,
       service_selected: data.service_selected,
+      scheduled_date: data.scheduled_date,
+      scheduled_time: data.scheduled_time,
     };
-    bookNow(payload, {
+    bookAppointment(payload, {
       onSuccess: (data) => {
+        navigate('/patient-info');
         reset();
         toast.success(data.message);
-        navigate('/patient-info');
       },
     });
   };
@@ -92,6 +94,42 @@ export default function BookNow() {
               {errors?.email?.message}
             </span>
           </fieldset>
+          <fieldset className='col-span-2 md:col-span-1'>
+            <label htmlFor='scheduled_date' className='text-[2rem]'>
+              Select Date
+            </label>
+            <input
+              type='scheduled_date'
+              name='scheduled_date'
+              id='scheduled_date'
+              placeholder='YYYY-MM-DD'
+              {...register('scheduled_date', {
+                required: 'This field is required',
+              })}
+              className='h-[4rem] w-full px-2 border-grey-900 border bg-grey-800 rounded-md'
+            />
+            <span className='text-red-900 text-xl'>
+              {errors?.scheduled_date?.message}
+            </span>
+          </fieldset>
+          <fieldset className='col-span-2  md:col-span-1'>
+            <label htmlFor='scheduled_time' className='text-[2rem]'>
+              Select Time
+            </label>
+            <input
+              type='scheduled_time'
+              name='scheduled_time'
+              id='scheduled_time'
+              placeholder='hh:mm:ss'
+              {...register('scheduled_time', {
+                required: 'This field is required',
+              })}
+              className='h-[4rem] w-full px-2 border-grey-900 border bg-grey-800 rounded-md'
+            />
+            <span className='text-red-900 text-xl'>
+              {errors?.scheduled_time?.message}
+            </span>
+          </fieldset>
           <fieldset className='col-span-2'>
             <label htmlFor='service_selected' className='text-[2rem]'>
               Select Service
@@ -115,9 +153,9 @@ export default function BookNow() {
 
           <button
             className='col-span-2 w-fit place-self-center uppercase px-[1.8rem] md:px-[2.2rem] py-[1rem] md:py-[1.2rem] bg-green-900 rounded-[1rem] text-[1.4rem] md:text-[1.6rem] font-semibold text-white '
-            disabled={bookNowLoading}
+            disabled={bookAppointmentLoading}
           >
-            {bookNowLoading ? 'Booking...' : 'Book now'}
+            {bookAppointmentLoading ? 'Scheduling...' : 'Schedule'}
           </button>
         </form>
       </div>
