@@ -95,37 +95,39 @@ export default function BookAppointment() {
             </span>
           </fieldset>
           <fieldset className='col-span-2 md:col-span-1'>
-            <label htmlFor='date' className='text-[2rem]'>
+            <label htmlFor='scheduled_date' className='text-[2rem]'>
               Select Date
             </label>
             <input
-              type='date'
-              name='date'
-              id='date'
-              placeholder='14-02-2024'
-              {...register('date', { required: 'This field is required' })}
-              className='h-[4rem] w-full px-2 border-grey-900 border bg-grey-800 rounded-md'
-            />
-            <span className='text-red-900 text-xl'>
-              {errors?.date?.message}
-            </span>
-          </fieldset>
-          <fieldset className='col-span-2  md:col-span-1'>
-            <label htmlFor='time' className='text-[2rem]'>
-              Select Time
-            </label>
-            <input
-              type='time'
-              name='time'
-              id='time'
-              placeholder='00:00:00'
-              {...register('time', {
+              type='scheduled_date'
+              name='scheduled_date'
+              id='scheduled_date'
+              placeholder='YYYY-MM-DD'
+              {...register('scheduled_date', {
                 required: 'This field is required',
               })}
               className='h-[4rem] w-full px-2 border-grey-900 border bg-grey-800 rounded-md'
             />
             <span className='text-red-900 text-xl'>
-              {errors?.time?.message}
+              {errors?.scheduled_date?.message}
+            </span>
+          </fieldset>
+          <fieldset className='col-span-2  md:col-span-1'>
+            <label htmlFor='scheduled_time' className='text-[2rem]'>
+              Select Time
+            </label>
+            <input
+              type='scheduled_time'
+              name='scheduled_time'
+              id='scheduled_time'
+              placeholder='hh:mm:ss'
+              {...register('scheduled_time', {
+                required: 'This field is required',
+              })}
+              className='h-[4rem] w-full px-2 border-grey-900 border bg-grey-800 rounded-md'
+            />
+            <span className='text-red-900 text-xl'>
+              {errors?.scheduled_time?.message}
             </span>
           </fieldset>
           <fieldset className='col-span-2'>
@@ -153,7 +155,7 @@ export default function BookAppointment() {
             className='col-span-2 w-fit place-self-center uppercase px-[1.8rem] md:px-[2.2rem] py-[1rem] md:py-[1.2rem] bg-green-900 rounded-[1rem] text-[1.4rem] md:text-[1.6rem] font-semibold text-white '
             disabled={bookAppointmentLoading}
           >
-            {bookAppointmentLoading ? 'Booking...' : 'Book now'}
+            {bookAppointmentLoading ? 'Scheduling...' : 'Schedule'}
           </button>
         </form>
       </div>
