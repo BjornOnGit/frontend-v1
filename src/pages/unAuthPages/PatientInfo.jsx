@@ -36,7 +36,7 @@ const PatientInfo = () => {
   return (
     <div className='px-5 md:px-24 mt-20 mb-5 md:mb-0 '>
       <h2 className=' text-4xl'>Patient info</h2>
-      <div className='w-full md:h-[calc(100vh-300px)] flex justify-center flex-col mt-10 bg-grey-800 shadow-blue-900 shadow rounded-[32px] p-10'>
+      <div className='w-full md:h-[calc(100vh-300px)] flex justify-center flex-col mt-10 bg-grey-800 shadow-blue-900 shadow rounded-[32px] p-10 py-20'>
         <p>
           To help us serve you better, please provide the following details{' '}
         </p>
@@ -162,7 +162,13 @@ const PatientInfo = () => {
               })}
             >
               <option value=''>---Select---</option>
-              <option value='urgent'>Urgent</option>
+              <option value='malaria'>Malaria</option>
+              <option value='asthma'>Asthma</option>
+              <option value='diabetics'>Diabetics</option>
+              <option value='high-blood-pressure'>High Blood Pressure</option>
+              <option value='cancer'>Cancer</option>
+              <option value='sickle-cell'>Sickle cell</option>
+              <option value='heart-disease'>Heart Disease</option>
             </select>
             <span className='text-red-900 text-xl'>
               {errors?.service_selected?.message}
