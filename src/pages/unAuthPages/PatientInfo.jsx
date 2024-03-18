@@ -23,7 +23,6 @@ const PatientInfo = () => {
       temperature: data.temperature,
       blood_pressure: data.bloodPressure,
       medical_history: data.medical_history,
-      appointment: 0,
     };
     patientInfo(payload, {
       onSuccess: (data) => {
@@ -169,6 +168,7 @@ const PatientInfo = () => {
               <option value='cancer'>Cancer</option>
               <option value='sickle-cell'>Sickle cell</option>
               <option value='heart-disease'>Heart Disease</option>
+              <option value='others'>Others</option>
             </select>
             <span className='text-red-900 text-xl'>
               {errors?.service_selected?.message}
