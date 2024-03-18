@@ -33,9 +33,10 @@ export default function Home() {
             CARE, CLOSE TO HOME
           </h1>
           <h3 className='text-xl w-7/12 mt-6 mb-8 leading-normal '>
-            At vero eos et accusamus et iusto odio dignissimos ducimus qui
-            blanditiis praesentium voluptatum deleniti atque corrupti quos
-            dolores et quas.
+            At virtuDoc we make healthcare easier and more transparent,
+            empowering you to make decisions based on information not just
+            instinct. You can rest easy knowing you and your family are
+            receiving high quality care.
           </h3>
           <div className='flex justify-start items-center gap-12'>
             <button
@@ -81,15 +82,19 @@ export default function Home() {
         <div className='flex justify-between items-center gap-2 w-10/12 m-auto'>
           <div className='w-6/12'>
             <h1 className='text-4xl font-semibold capitalize'>Discover</h1>
-            <div className='my-12 text-xl leading-normal'>
+            <p className='my-12 text-xl leading-normal'>
               Learn about different health conditions and how you can live a
-              healthy life ...At vero eos et accusamus et iusto odio dignissimos
-              ducimus qui blanditiis praesentium voluptatum deleniti atque
-              corrupti quos dolores et quas.
-            </div>
-            <div className='px-10 py-4 uppercase text-[#fff] cursor-pointer border-none font-medium rounded-xl text-xl bg-[#29E189] w-max'>
-              Learn More
-            </div>
+              healthy life. At virtuDoc we make healthcare easier and more
+              transparent, empowering you to make decisions based on information
+              not just instinct. You can rest easy knowing you and your family
+              are receiving high quality care.
+            </p>
+            <button
+              className='px-10 py-4 uppercase text-[#fff] cursor-pointer border-none font-medium rounded-xl text-xl bg-[#29E189] w-max'
+              onClick={() => navigate('/book-now')}
+            >
+              Book now
+            </button>
           </div>
 
           <div>
