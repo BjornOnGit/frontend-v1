@@ -99,7 +99,7 @@ export default function BookAppointment() {
               Select Date
             </label>
             <input
-              type='scheduled_date'
+              type='date'
               name='scheduled_date'
               id='scheduled_date'
               placeholder='YYYY-MM-DD'
@@ -117,7 +117,7 @@ export default function BookAppointment() {
               Select Time
             </label>
             <input
-              type='scheduled_time'
+              type='time'
               name='scheduled_time'
               id='scheduled_time'
               placeholder='hh:mm:ss'
