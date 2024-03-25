@@ -41,7 +41,7 @@ export default function Home() {
           <div className='flex justify-start items-center gap-12'>
             <button
               className='text-xl border-none px-10 py-4 rounded-xl font-medium cursor-pointer uppercase text-[#fff] bg-[#29E189]'
-              onClick={() => navigate('/book-now')}
+              onClick={() => navigate('/book-appointment')}
             >
               Book Now
             </button>

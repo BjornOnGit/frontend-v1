@@ -25,9 +25,9 @@ export default function BookNow() {
     };
     bookNow(payload, {
       onSuccess: (data) => {
+        navigate('/patient-info');
         reset();
         toast.success(data.message);
-        navigate('/patient-info');
       },
     });
   };
