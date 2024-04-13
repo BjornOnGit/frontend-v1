@@ -80,7 +80,7 @@ const Chat = () => {
   } = useForm();
 
   const onSubmit = async (data) => {
-    console.log(data.textMessage);
+    // console.log(data.textMessage);
     const newMessage = {
       message: data.textMessage,
       isMyMessage: true,
@@ -129,7 +129,7 @@ const Chat = () => {
         return response.json();
       })
       .then((data) => {
-        console.log(data?.choices[0]?.message?.content);
+        // console.log(data?.choices[0]?.message?.content);
         setMessages([
           ...chatMessages,
           {
